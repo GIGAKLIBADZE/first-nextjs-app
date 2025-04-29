@@ -1,5 +1,13 @@
+import { Button } from "antd";
 import React from "react";
 
 export default function page() {
-  return <div className="text-red-500">Contact</div>;
+  return (
+    <>
+      <Button type="primary" className="looking">
+        Looking
+      </Button>
+      <Button type="primary">Contact</Button>;
+    </>
+  );
 }
