@@ -1,20 +1,15 @@
 import React from "react";
 import Link from "next/link";
+import Image from "next/image";
+import { Typography } from "antd";
+// import Logo from "./../images/online-book-logo-icon.webp";
+import Logo from "@/images/online-book-logo-icon.webp";
 
 export default function Header() {
   return (
-    <div>
-      <h1>Welcome to JIO organization</h1>
-      <nav>
-        <ul>
-          <li>
-            <Link href={"/about"}>About</Link>
-          </li>
-          <li>
-            <Link href={"/contact"}>About</Link>
-          </li>
-        </ul>
-      </nav>
-    </div>
+    <header>
+      <h1>BOOKBLUS</h1>
+      <Image src={Logo} alt="Logo" width={50} height={50} />
+    </header>
   );
 }
