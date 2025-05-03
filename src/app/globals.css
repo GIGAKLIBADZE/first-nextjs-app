@@ -44,3 +44,9 @@ header {
   justify-content: space-between;
   padding: 1rem 1.5rem;
 }
+
+footer {
+  display: flex;
+  justify-content: center
+  /* margin: auto; */
+}
