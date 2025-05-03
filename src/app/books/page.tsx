@@ -1,7 +1,7 @@
 "use client";
 
 import React, { useState } from "react";
-import { Table, Button, Tag } from "antd";
+import { Table, Button, Tag, Typography } from "antd";
 
 const dataSource = [
   {
@@ -20,6 +20,120 @@ const dataSource = [
     key: "3",
     title: "1984",
     author: "George Orwell",
+    status: "Unread",
+  },
+  {
+    key: "4",
+    title: "Pride and Prejudice",
+    author: "Jane Austen",
+    status: "Read",
+  },
+  {
+    key: "5",
+    title: "Moby-Dick",
+    author: "Herman Melville",
+    status: "Unread",
+  },
+  {
+    key: "6",
+    title: "Brave New World",
+    author: "Aldous Huxley",
+    status: "Unread",
+  },
+  {
+    key: "7",
+    title: "The Catcher in the Rye",
+    author: "J.D. Salinger",
+    status: "Read",
+  },
+  {
+    key: "8",
+    title: "The Hobbit",
+    author: "J.R.R. Tolkien",
+    status: "Read",
+  },
+  {
+    key: "9",
+    title: "Fahrenheit 451",
+    author: "Ray Bradbury",
+    status: "Unread",
+  },
+  {
+    key: "10",
+    title: "Jane Eyre",
+    author: "Charlotte Brontë",
+    status: "Unread",
+  },
+  {
+    key: "11",
+    title: "Wuthering Heights",
+    author: "Emily Brontë",
+    status: "Read",
+  },
+  {
+    key: "12",
+    title: "Crime and Punishment",
+    author: "Fyodor Dostoevsky",
+    status: "Unread",
+  },
+  {
+    key: "13",
+    title: "The Odyssey",
+    author: "Homer",
+    status: "Read",
+  },
+  {
+    key: "14",
+    title: "The Brothers Karamazov",
+    author: "Fyodor Dostoevsky",
+    status: "Unread",
+  },
+  {
+    key: "15",
+    title: "Animal Farm",
+    author: "George Orwell",
+    status: "Read",
+  },
+  {
+    key: "16",
+    title: "The Alchemist",
+    author: "Paulo Coelho",
+    status: "Read",
+  },
+  {
+    key: "17",
+    title: "The Book Thief",
+    author: "Markus Zusak",
+    status: "Unread",
+  },
+  {
+    key: "18",
+    title: "The Kite Runner",
+    author: "Khaled Hosseini",
+    status: "Read",
+  },
+  {
+    key: "19",
+    title: "Slaughterhouse-Five",
+    author: "Kurt Vonnegut",
+    status: "Unread",
+  },
+  {
+    key: "20",
+    title: "A Tale of Two Cities",
+    author: "Charles Dickens",
+    status: "Unread",
+  },
+  {
+    key: "21",
+    title: "Les Misérables",
+    author: "Victor Hugo",
+    status: "Read",
+  },
+  {
+    key: "22",
+    title: "Don Quixote",
+    author: "Miguel de Cervantes",
     status: "Unread",
   },
 ];
@@ -60,10 +174,20 @@ export default function Books() {
       ),
     },
   ];
+
+  const { Title } = Typography;
+
   return (
-    <div>
-      <h1>My book list:</h1>
-      <Table columns={columns} dataSource={dataSource}></Table>
+    <div className="books-table">
+      <Title level={3} style={{ color: "white" }}>
+        My book list:
+      </Title>
+      <Table
+        className="custom-table"
+        pagination={{ pageSize: 6 }}
+        columns={columns}
+        dataSource={dataSource}
+      />
     </div>
   );
 }

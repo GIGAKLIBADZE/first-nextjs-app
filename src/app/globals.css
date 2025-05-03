@@ -48,5 +48,24 @@ header {
 footer {
   display: flex;
   justify-content: center
-  /* margin: auto; */
+}
+
+.books-table {
+  padding: 1rem 1.5rem;
+  margin-top: 0.5rem;
+}
+
+.custom-table .ant-table-thead > tr > th {
+  background-color: #fafafa; /* Softer light gray */
+  color: #333;                /* Softer text color */
+}
+
+.custom-table .ant-table-tbody > tr > td {
+  background-color: #fff;     /* Pure white for consistency */
+  color: #333;
+}
+
+.custom-table .ant-table {
+  background-color: #fff;
+  border: 1px solid #e5e5e5;  /* Subtle border to distinguish */
 }
